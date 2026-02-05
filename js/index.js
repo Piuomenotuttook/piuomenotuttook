@@ -1,7 +1,7 @@
 /* Efecto oscurecedor */
 document.addEventListener('scroll', () => {
     const overlay = document.getElementById('overlay')
-    const height = window.innerHeight / 8
+    const height = window.innerHeight / 8 
     if (scrollY >= height) {
         overlay.style.opacity = '0.6'
     } else if (scrollY <= height) {
@@ -10,20 +10,34 @@ document.addEventListener('scroll', () => {
 })
 /* add classlist modificarla dentro css */
 /* Menu pop-up */
-const menuOpen = document.getElementById('menu--icon')
+const menuOpen = document.getElementById('menu--button')
 const menuClose = document.getElementById('close--btn')
 const menuDisplayed = document.getElementById('menu--popup')
+const header = document.getElementById('header')
 
 menuOpen.addEventListener('click', () => {
+/*   Primer intento  
     menuDisplayed.style.display = 'flex'
     menuDisplayed.style.flexDirection = 'column'
     menuDisplayed.style.justifyContent = 'center'
-    menuOpen.style.display = 'none'
+    menuOpen.style.display = 'none' */
     /* menuDisplayed.classList.add('menu--popup') */
+
+    menuDisplayed.classList.add('active')
+    menuDisplayed.classList.remove('hidden')
+
+    menuOpen.style.display = 'none'
+
+    header.style.position = 'relative'
+    header.style.zIndex = '2'
 })
 
 menuClose.addEventListener('click', () => {
-    menuDisplayed.style.display = 'none'
+/*     menuDisplayed.style.display = 'none'
+    menuOpen.style.display = 'block' */
+    menuDisplayed.classList.add('hidden')
+    menuDisplayed.classList.remove('active')
+    menuOpen.style.display = 'block'
 }) 
 
 /* Room carousel */

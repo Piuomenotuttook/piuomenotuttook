@@ -12,11 +12,14 @@
 <body>
     
     <!-- Header -->
-    <header class="header">
+    <header id="header" class="header">
         <nav class="header__nav flex-row">
             <div class="header__block block flex-row">
-                <img class="logo__image" src="../media/1-Portada/logo.png" alt="logo">
-                <button id="menu--icon" class="menu--icon">
+                <picture class="logo__image">
+                    <img loading="lazy" class="logo__img" src="media/1-Portada/logo.png" alt="logo">
+                    <source src="media/1-Portada/logo.png">
+                </picture>
+                <button id="menu--button" class="menu--button" aria-label="abrir menu">
                     <i class="ri-equal-line icon"></i>
                 </button>
             </div>
@@ -25,33 +28,25 @@
 
     <!-- Portada --> 
     <main class="main">
-        <section id="portada" class="portada">
+        <div id="portada" class="portada">
             <div id="portada--background" class="portada--background flex-column">
                 <div id="overlay" class="overlay"></div>
                 <div class="background">
-                    <!-- 
-                    <img class="portada__image-up" src="../media/1-Portada/Portada_1.jpg" alt="portada-up">
-                    <a href="shop.html">
-                        <img id="portada__btn" class="portada__btn" src="../media/1-Portada/btn_1.png" alt="btn_1">
-                    </a>
-                    <img id="portada__image-down" class="portada__image-down" src="../media/1-Portada/Portada_2.jpg" alt="portada-down"> -->
                     <i class="ri-arrow-down-double-fill arrow-down"></i>
-                    <a href="shop.html">
-                        <img id="portada__btn" class="portada__btn" src="media/1-Portada/btn_1-mask.png" alt="btn_1">
+                    <a class="btn__link" href="shop.html">
+                        <img loading="lazy" id="portada__btn" class="portada__btn" src="media/1-Portada/btn_1-mask.png" alt="btn_1">
                     </a>
                     <picture class="portada__picture">
-                        <img class="portada__img" src="media/1-Portada/Portada_1-full.jpeg" alt="portada">
+                        <img loading="lazy" class="portada__img" src="media/1-Portada/Portada_1-full.jpg" alt="portada">
                     </picture>
                 </div>
             </div>
 
             <!-- Menu pop-up -->
-            <div id="menu--popup" class="menu--popup">
-                <button id="close--btn" class="close--btn">
-                    <a class="icon__link" href="#">
+            <div id="menu--popup" class="menu--popup hidden"> 
+                    <a id="close--btn" class="close--btn" href="#" aria-label="close" role="button">
                         <i class="ri-close-large-line icon"></i>
                     </a>
-                </button>
                 <div class="menu__content">
                     <ul class="menu__list">
                         <li class="menu__element flex-column">
@@ -64,7 +59,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
     </main>    
 </body>
 </html>

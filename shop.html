@@ -12,11 +12,14 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
+    <header id="header" class="header">
         <nav class="header__nav flex-row">
             <div class="header__block block flex-row">
-                <img class="logo__image" src="../media/1-Portada/logo.png" alt="logo">
-                <button id="menu--icon" class="menu--icon">
+                <picture class="logo__image">
+                    <img loading="lazy" class="logo__img" src="media/1-Portada/logo.png" alt="logo">
+                    <source src="media/1-Portada/logo.png">
+                </picture>
+                <button id="menu--button" class="menu--button" aria-label="abrir menu">
                     <i class="ri-equal-line icon"></i>
                 </button>
             </div>
@@ -25,33 +28,31 @@
 
     <!-- Shop structure -->
     <main class="main">
-        <section class="shop flex-column">
+        <div class="shop flex-column">
             <div class="shop__block">
                 <div class="shop__item">
                     <a class="jeans__link" href="jeans1.html">
-                        <picture class="jeans__picture"><img class="jeans" src="media/Shop/jeans1-front.png" alt="jeans1"></picture>
+                        <picture class="jeans__picture"><img loading="lazy" class="jeans" src="media/Shop/jeans1-front.png" alt="jeans1"></picture>
                     </a>
                 </div>
                 <div class="shop__item">
                     <a class="jeans__link" href="jeans2.html">
-                        <picture class="jeans__picture"><img class="jeans" src="media/Shop/jeans2-front.png" alt="jeans2"></picture>
+                        <picture class="jeans__picture"><img loading="lazy" class="jeans" src="media/Shop/jeans2-front.png" alt="jeans2"></picture>
                     </a>
                 </div>
                 <div class="shop__item">
                     <a class="jeans__link" href="jeans3.html">
-                        <picture class="jeans__picture"><img class="jeans" src="media/Shop/jeans3-front.png" alt="jeans3"></picture>
+                        <picture class="jeans__picture"><img loading="lazy" class="jeans" src="media/Shop/jeans3-front.png" alt="jeans3"></picture>
                     </a>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Menu pop-up -->
-        <div id="menu--popup" class="menu--popup">
-            <button id="close--btn" class="close--btn">
-                <a class="icon__link" href="#">
-                    <i class="ri-close-large-line icon"></i>
-                </a>
-            </button>
+        <div id="menu--popup" class="menu--popup hidden">
+            <a id="close--btn" class="close--btn" href="#" aria-label="close" role="button">
+                <i class="ri-close-large-line icon"></i>
+            </a>
             <div class="menu__content">
                 <ul class="menu__list">
                     <li class="menu__element flex-column">
