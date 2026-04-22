@@ -16,11 +16,13 @@
         <nav class="header__nav flex-row">
             <div class="header__block block flex-row">
                 <picture class="logo__image">
+                    <source srcset="media/1-Portada/logo.png">
                     <img loading="lazy" class="logo__img" src="media/1-Portada/logo.png" alt="logo">
-                    <source src="media/1-Portada/logo.png">
                 </picture>
                 <button id="menu--button" class="menu--button" aria-label="abrir menu">
-                    <i class="ri-equal-line icon"></i>
+                    <svg class="menu" xmlns="http://www.w3.org/2000/svg">
+                        <use class="hamburguesa" href="media/icons.svg#hamburguesa"></use>
+                    </svg>
                 </button>
             </div>
         </nav>
@@ -67,7 +69,11 @@
                         <picture class="sizes-table">
                             <img loading="lazy" class="table__image" src="media/Shop/sizes-table.png" alt="sizes-table">
                         </picture>
-                        <a class="back--icon" href="shop.html"><i class="ri-arrow-go-back-fill"></i></a>
+                        <a class="back--icon" href="shop.html">
+                           <svg class="arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use class="backarrow icon" href="media/icons.svg#backarrow"></use>
+                           </svg>
+                        </a>
                     </div>                    
                 </div>
             </div>
@@ -76,7 +82,9 @@
         <!-- Menu pop-up -->
         <div id="menu--popup" class="menu--popup hidden">
             <a id="close--btn" class="close--btn" href="#" aria-label="close" role="button">
-                <i class="ri-close-large-line icon"></i>
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <use href="media/icons.svg#xclose" class="icon"></use>
+                </svg>
             </a>
             <div class="menu__content">
                 <ul class="menu__list">

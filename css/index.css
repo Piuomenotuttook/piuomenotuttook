@@ -14,7 +14,7 @@
     /* Fonts */
     --f-lg: 900 clamp(1rem, 1.5vw, 3rem) "Doto", sans-serif;
     --f-md: 600 clamp(0.8rem, 1.3vw, 2rem) "Doto", sans-serif;
-    --f-sm: 400 clamp(0.5rem, 1vw, 1.5rem) "Doto", sans-serif; 
+    --f-sm: 400 clamp(0.5rem, 1vw, 1rem) "Doto", sans-serif; 
 
     /* Spaces */
     --s-xxl: 15rem;
@@ -74,7 +74,7 @@ button {
     border: transparent;
 }
 
-i {
+svg {
     color: var(--c-text);
 }
 .icon {
@@ -106,8 +106,14 @@ i {
             padding: 1rem;
 
             & .menu--button {
-                & .icon {
-                    font-size: var(--s-md);
+                max-width: var(--s-md);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                & .menu {
+                    width: var(--s-md);    
+                    height: var(--s-md);
                 }
             }
            
@@ -143,11 +149,10 @@ i {
                 z-index: 1;
                 top: 60vh;
                 left: 15vw;
-                font-size: var(--s-xl);
                 transform: translate(64px);    
                 animation: arrowDown 1s ease-in infinite;
                 animation-delay: 0.5s;
-            
+
             }
             & .portada__picture {
                 position: relative;
@@ -334,7 +339,7 @@ i {
             padding: 1rem;
             gap: 2rem;
             background-color: rgba(0, 0, 0, 0.7);
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             & .technical--info {
@@ -362,6 +367,10 @@ i {
                 & .back--icon {
                     position: relative;
                     right: -1rem;
+                    & .arrow {
+                        width: var(--s-md);
+                        height: var(--s-md);
+                    }
                 }
             }
             & .technical--img {
@@ -390,9 +399,9 @@ i {
         align-items: center;
         flex-wrap: wrap;
 
-        gap: 4rem;
+        gap: 2rem;
         & .foto-Sonia {
-            max-width: var(--mw-sm);
+            max-width: var(--mw-md);
             flex-grow: 1.5; 
             flex-basis: 0;
             border-radius: 15px;
@@ -410,6 +419,10 @@ i {
             & .contacts__span {
                 font: var(--f-md);
                 gap: 1rem;
+                & .icon {
+                    height: var(--s-md);
+                    width: var(--s-md);
+                }
             }
         }
     }
@@ -450,6 +463,8 @@ i {
             top: 7vh;
             right: 11vw;
             z-index: 5;
+            height: var(--s-md);
+            width: var(--s-md);
             
                 & .icon {
                     font-size: var(--s-md);
@@ -481,7 +496,7 @@ i {
 }
 
 /* Media Queries para tamaños pequeños */
-@media (max-width: 600px) {
+@media (max-width: 780px) {
 
     /* Reduce el tamaño del logotipo y el icono */
     .header { 
@@ -632,8 +647,13 @@ i {
         & .jeans__block {
             & .product__block {
                 & .jeans__imgs {
-                    flex-wrap: wrap;
+                    flex-direction: column;
+                    align-items: center;
                 }
+            }
+            & .product__info {
+                flex-direction: column;
+                align-items: center;
             }
     }
 
@@ -647,7 +667,7 @@ i {
         & .contacts__block {
             & .contacts__content {
                 font: var(--f-md);
-                padding: 1rem;
+                padding: 0;
                 width: auto;
                 & .contacts__span{
                     align-items: center;
