@@ -16,8 +16,8 @@
         <nav class="header__nav flex-row">
             <div class="header__block block flex-row">
                 <picture class="logo__image">
+                    <source srcset="media/1-Portada/logo.png">
                     <img loading="lazy" class="logo__img" src="media/1-Portada/logo.png" alt="logo">
-                    <source src="media/1-Portada/logo.png">
                 </picture>
                 <button id="menu--button" class="menu--button" aria-label="abrir menu">
                     <svg class="menu" xmlns="http://www.w3.org/2000/svg">
@@ -33,15 +33,18 @@
         <div class="shop flex-column">
             <div class="shop__block">
                 <div class="shop__item">
-                    <a class="jeans__link" href="jeans1.html">
-                        <picture class="jeans__picture"><img loading="lazy" class="jeans" src="media/Shop/jeans1-front.png" alt="jeans1"></picture>
-                    </a>
-                </div>
-                <div class="shop__item">
                     <a class="jeans__link" href="jeans2.html">
                         <picture class="jeans__picture"><img loading="lazy" class="jeans" src="media/Shop/jeans2-front.png" alt="jeans2"></picture>
                     </a>
                 </div>
+                <div class="shop__item">
+                    <a class="jeans__link" href="jeans1.html">
+                        <picture class="jeans__picture"><img loading="lazy" class="jeans" src="media/Shop/jeans1-front.png" alt="jeans1"></picture>
+                    </a>
+                </div>
+
+<!--
+
                 <div class="shop__item">
                     <a class="jeans__link" href="jeans3.html">
                         <picture class="jeans__picture"><img loading="lazy" class="jeans" src="media/Shop/jeans3-front.png" alt="jeans3"></picture>
@@ -49,6 +52,8 @@
                 </div>
             </div>
         </div>
+
+-->
 
         <!-- Menu pop-up -->
         <div id="menu--popup" class="menu--popup hidden">

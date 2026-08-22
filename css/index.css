@@ -364,6 +364,11 @@ svg {
                         }
                     }
                 }
+                & .invite {
+                    & .link {
+                        text-decoration: underline;
+                    }
+                }
                 & .back--icon {
                     position: relative;
                     right: -1rem;
