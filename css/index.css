@@ -424,6 +424,7 @@ svg {
             & .contacts__span {
                 font: var(--f-md);
                 gap: 1rem;
+                align-items: center;
                 & .icon {
                     height: var(--s-md);
                     width: var(--s-md);
@@ -503,6 +504,11 @@ svg {
 /* Media Queries para tamaños pequeños */
 @media (max-width: 780px) {
 
+@font-face {
+    font-family: "Doto", sans-serif;
+    src: url('../Doto-VariableFont_ROND\,wght.ttf');
+}
+
     /* Reduce el tamaño del logotipo y el icono */
     .header { 
         & .header__nav {
@@ -561,7 +567,7 @@ svg {
         position: relative;
         & .portada--background {
             display: none;
-            /* & .overlay {
+             & .overlay {
                 display: none;
             }
             & .background {
@@ -572,14 +578,14 @@ svg {
                 }
                 & .portada__picture {
                     & .portada__img {
-                        /* height: 100vh; 
+                        height: 100vh; 
                         display: none;
                     }
                 }
                 & .arrow-down {
                     display: none;
                 }
-            } */
+            } 
         }
     }
 
@@ -621,7 +627,7 @@ svg {
 
     & .shop { 
         background-image: url('../media/1-Portada/Portada_1-full.jpg');
-        background-repeat: repeat-y;    
+        /* background-repeat: repeat-y; */
         background-size: 100% auto;  
         min-height: 100vh;    
         height: auto;
@@ -672,11 +678,12 @@ svg {
         & .contacts__block {
             & .contacts__content {
                 font: var(--f-md);
-                padding: 0;
+                padding: 10px;
                 width: auto;
+                align-items: center;
                 & .contacts__span{
                     align-items: center;
-                    justify-content: start;
+                    justify-content: space-between;
                     & i {
                         display: flex;
                         align-items: center;
@@ -696,6 +703,17 @@ svg {
         & .jeans__block {
             & .product__info {
                 justify-content: center;
+            }
+        }
+    }
+
+    & .contacts {
+        & .contacts__block {
+            & .contacts__content {
+                & .contacts__span {
+                    align-items: center;
+                    justify-content: space-between;
+                }
             }
         }
     }
