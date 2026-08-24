@@ -326,8 +326,8 @@ svg {
                 }
             }
             & .jeans__imgs {
-                gap: 2rem; 
-                justify-content: space-between;
+                gap: 7rem; 
+                justify-content: center;
                 & .jeans__img {
                     max-width: var(--mw-md);
                 }
@@ -382,6 +382,22 @@ svg {
                 & img {
                     max-height: var(--mw-md);
                 }
+            }
+        }
+        & .pics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--s-sm);
+            
+            & .pic {
+                justify-self: center;
+                align-self: center;
+                
+                & .pict {
+                    border-radius: 15px;
+                    max-width: 450px;
+                }
+
             }
         }
     }
@@ -666,7 +682,11 @@ svg {
                 flex-direction: column;
                 align-items: center;
             }
-    }
+            & .pics {
+                display: flex;
+                gap: 2rem;
+            }
+        }
 
     /* Reducido el font y los espacios */
 
