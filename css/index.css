@@ -259,6 +259,7 @@ svg {
     background-size: cover;
     height: 100vh;
     z-index: 1;
+    margin-top: 10% 0;
 
     justify-content: center;
     align-items: center;
@@ -266,7 +267,8 @@ svg {
     & .shop__block {    /* disposición grid del shop
  */
         max-width: 80vw;
-        gap: 4rem;
+        gap: 8rem;
+
 
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -644,14 +646,14 @@ svg {
     & .shop { 
         background-image: url('../media/1-Portada/Portada_1-full.jpg');
         /* background-repeat: repeat-y; */
-        background-size: 100% auto;  
+        background-size: 100% cover;  
         min-height: 100vh;    
-        height: auto;
+       /* height: auto;*/
         overflow: visible;
         z-index: 1;
         & .shop__block {
             height: max-content;
-            margin: 10% 0; 
+            margin: 10% 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -660,11 +662,19 @@ svg {
             gap: 2rem;
 
             & .shop__item {
-                margin-top: 8vh;
+                /*margin-top: 8vh;*/
                 width: 100%;
-                max-width: var(--mw-md);
+                max-width: var(--mw-sm);
                 display: flex;
                 justify-content: center;
+
+                & .jeans__link {
+                    & .jeans__picture{
+                        & .jeans{
+                           max-height: calc(var(--mw-sm) - 3rem); 
+                        }
+                    }
+                }
             }
         }
     }
